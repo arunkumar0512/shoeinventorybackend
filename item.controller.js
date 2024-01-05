@@ -1,54 +1,7 @@
-// import itemcollection from "../Models/item.collection.schema.js";
-// import mongoose from "mongoose";
-
-
-
-// export const productdetails= async (req, res) => {
-//     try {
-//         const newProduct = req.body;
-//     const result = await itemcollection.create(newProduct);
-//     res.status(200).json({message:"product created",data:result});
-        
-//     } catch (error) {
-        
-//         console.log("product create error" ,error)
-//     }
     
-// }
-
-
-// export const getproductdetails=async(req,res)=>{
-//     try {
-//         const query = {};
-//             const cursor = itemcollection.find(query);
-//             const product = await cursor.exec();
-//             res.status(200).json({message:"get product",data:product});
-        
-//     } catch (error) {
-//         console.log("get error" ,error)
-        
-//     }
-// }
-
-// export const deleteproductdetails=async(req,res)=>{
-
-//     try {
-//     const deleteId = req.params.id
-//    console.log(deleteId)
-//     const result = await itemcollection.deleteOne({ _id: new mongoose.Types.ObjectId(deleteId) })
-//     if (result.deletedCount === 0) {
-//         return res.status(404).json({ error: "product not found" })
-//     }
-//     res.status(200).json({ message: "deleted  successfully" })
-// } catch (error) {
-//     console.log(error)
-    
-// }
-
-// }    
-import itemcollection from "../Models/item.collection.schema.js";
+import itemcollection from "./item.collection.schema.js";
 import mongoose from "mongoose";
-import User from "../Models/login.schema.js";
+import User from "./login.schema.js";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 import dotenv from 'dotenv'
